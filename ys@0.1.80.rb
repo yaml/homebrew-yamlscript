@@ -8,7 +8,7 @@ class YsAT0180 < Formula
 
   download = 'https://github.com/yaml/yamlscript/releases/download'
 
-  desc ""
+  desc "Program in YAML — Code is Data"
   homepage "https://github.com/yaml/yamlscript"
   version version
   license "MIT"
