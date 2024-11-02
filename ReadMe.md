@@ -10,4 +10,5 @@ Works on Mac and Linux for Intel and ARM.
 
 ```
 $ brew install yaml/yamlscript/ys
+$ brew install yaml/yamlscript/ys@0.1.81
 ```
