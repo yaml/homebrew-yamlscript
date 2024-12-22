@@ -1,39 +1,41 @@
 class CLASS < Formula
-  version = 'VERSION'
-
-  sha_lin_arm = 'LIN_ARM'
-  sha_lin_int = 'LIN_INT'
-  sha_mac_arm = 'MAC_ARM'
-  sha_mac_int = 'MAC_INT'
-
-  download = 'https://github.com/yaml/yamlscript/releases/download'
-
   desc "Program in YAML — Code is Data"
-  homepage "https://github.com/yaml/yamlscript"
-  version version
+  homepage "https://yamlscript.org"
+  version "VERSION"
   license "MIT"
+  repo = "https://github.com/yaml/yamlscript"
+  head "#{repo}.git", branch: "main"
 
-  on_linux do
-    if Hardware::CPU.arm?
-      url "#{download}/#{version}/ys-#{version}-linux-aarch64.tar.xz"
-      sha256 sha_lin_arm
-    end
-
-    if Hardware::CPU.intel?
-      url "#{download}/#{version}/ys-#{version}-linux-x64.tar.xz"
-      sha256 sha_lin_int
-    end
+  livecheck do
+    url :stable
+    strategy :github_latest
   end
 
+  sha_mac_arm = "MAC_ARM"
+  sha_mac_int = "MAC_INT"
+  sha_lin_arm = "LIN_ARM"
+  sha_lin_int = "LIN_INT"
+
+  download = "#{repo}/releases/download"
+
   on_macos do
-    if Hardware::CPU.arm?
+    on_arm do
       url "#{download}/#{version}/ys-#{version}-macos-aarch64.tar.xz"
       sha256 sha_mac_arm
     end
-
-    if Hardware::CPU.intel?
+    on_intel do
       url "#{download}/#{version}/ys-#{version}-macos-x64.tar.xz"
       sha256 sha_mac_int
+    end
+  end
+  on_linux do
+    on_arm do
+      url "#{download}/#{version}/ys-#{version}-linux-aarch64.tar.xz"
+      sha256 sha_lin_arm
+    end
+    on_intel do
+      url "#{download}/#{version}/ys-#{version}-linux-x64.tar.xz"
+      sha256 sha_lin_int
     end
   end
 
