@@ -1,7 +1,7 @@
-class YsAT0186 < Formula
+class YsAT0187 < Formula
   desc "Program in YAML — Code is Data"
   homepage "https://yamlscript.org"
-  version "0.1.86"
+  version "0.1.87"
   license "MIT"
   repo = "https://github.com/yaml/yamlscript"
   head "#{repo}.git", branch: "main"
@@ -11,10 +11,10 @@ class YsAT0186 < Formula
     strategy :github_latest
   end
 
-  sha_mac_arm = "4fd0ee35d9d73e6c7578f05447a977767116419874af38a10f450221409b36ba"
-  sha_mac_int = "b028cb93843e0563101b22f36b342f949ac50ed481a95a71c98142a87c46461f"
-  sha_lin_arm = "6a0682546dd3837d9db73624b7d8d0506e9160c5deb10341e3b292afccd30ebb"
-  sha_lin_int = "c95cbf3a7a1e1fcf5b3da32152ea4ccf019445ed408e7ca40e1a4dcc824618a7"
+  sha_mac_arm = "fd26ff63616287063538c375e7494a0b5f70a679c4f32a72dd2a0e8d4f924492"
+  sha_mac_int = "ac99a7d205a227dd98ccd2fd4daf391a0a3b471792a9eedcebf1efe616e766eb"
+  sha_lin_arm = "0afff2004ed79001a6e0bf7adb086a0b20ef994c9a07470b5f4f5ff5617b5e16"
+  sha_lin_int = "437042ea70b4af3d5c585688c3a80f36ad536165995852b5610e828e8813f0d8"
 
   download = "#{repo}/releases/download"
 

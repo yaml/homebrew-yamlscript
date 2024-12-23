@@ -1,0 +1,45 @@
+name: Test
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+    - .github/workflows/test.yaml
+    - ys*.rb
+
+jobs:
+  Test:
+    strategy:
+      matrix:
+        os:
+        - macos-13
+        - macos-latest
+        - macos-15
+        - ubuntu-20.04
+        - ubuntu-22.04
+        - ubuntu-latest
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Set up Homebrew
+      id: set-up-homebrew
+      uses: Homebrew/actions/setup-homebrew@master
+
+    - name: Cache Homebrew Bundler RubyGems
+      uses: actions/cache@v4
+      with:
+        path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+        key:  ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+        restore-keys: ${{ matrix.os }}-rubygems-
+
+    - name: Install Bundler RubyGems
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: brew install-bundler-gems
+
+    - name: Tap & Test Formula
+      run: |
+        brew tap ${{ github.repository_owner }}/yamlscript
+        brew style
+        brew audit --skip-style ys
+        brew install ys
+        brew test ys
