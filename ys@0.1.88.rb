@@ -1,4 +1,4 @@
-class Ys < Formula
+class YsAT0188 < Formula
   version = '0.1.88'
 
   sha_lin_arm = '066fc0e33b1c7f4ce98d3af12ab0e3ea37ed66b8f7c1bc2268b74fb7379f4598'
