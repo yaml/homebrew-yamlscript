@@ -1,10 +1,10 @@
 class Ys < Formula
-  version = '0.1.93'
+  version = '0.1.94'
 
-  sha_lin_arm = 'a59746c6266e75d8435a752c60f68da84601f290fae040fc1b6e831f8f8a6ad8'
-  sha_lin_int = '44a698dea0cf55149b9ac144f57f64ad53609ef029e5b9b07aac2ae0e8d3e951'
-  sha_mac_arm = 'd8effc8badb82fc7d4316e0eb69195ef2b792473ab20c608931737a674f18fcb'
-  sha_mac_int = 'd43cf899a02582683011982f5c59a3d1955e660981b8812a5922eb3d1f2df07d'
+  sha_lin_arm = 'f041e3d325e1fbcf66397994f2cb2884825bddc4f7d3a8cb9051470c7c1110ee'
+  sha_lin_int = 'ef2ddb5d4af1e91c3ab3502b3c78f28ec4e7efee5038192643d09669be0b7e18'
+  sha_mac_arm = 'c50ec0e428670241a298da5f1c1da0c3988d7252e95fe3273fa1697d18fd1f2e'
+  sha_mac_int = 'de08fd8486f9baad69684deb375944958c4101c4dfce9eb510f0d5a6313698c8'
 
   download = 'https://github.com/yaml/yamlscript/releases/download'
 
