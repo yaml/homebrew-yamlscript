@@ -1,4 +1,4 @@
-class Libys < Formula
+class LibysAT0222 < Formula
   desc "YAMLScript shared library"
   homepage "https://github.com/yaml/yamlscript"
   version "0.2.22"
