@@ -6,11 +6,11 @@ homebrew-yamlscript
 
 ## Install YAMLScript with Homebrew
 
-Works on Linux Intel and macOS ARM.
+Works on Linux Intel, Linux ARM and macOS ARM.
 
 ```
 $ brew install yaml/yamlscript/ys
-$ brew install yaml/yamlscript/ys@0.2.26
+$ brew install yaml/yamlscript/ys@0.2.27
 $ brew install yaml/yamlscript/libys
-$ brew install yaml/yamlscript/libys@0.2.26
+$ brew install yaml/yamlscript/libys@0.2.27
 ```
