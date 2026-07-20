@@ -10,7 +10,7 @@ Works on Linux Intel, Linux ARM and macOS ARM.
 
 ```
 $ brew install yaml/yamlscript/ys
-$ brew install yaml/yamlscript/ys@0.2.28
+$ brew install yaml/yamlscript/ys@0.2.29
 $ brew install yaml/yamlscript/libys
-$ brew install yaml/yamlscript/libys@0.2.28
+$ brew install yaml/yamlscript/libys@0.2.29
 ```
