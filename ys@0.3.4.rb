@@ -1,4 +1,4 @@
-class Ys < Formula
+class YsAT034 < Formula
   desc "Program in YAML - Code is Data"
   homepage "https://github.com/yaml/yamlscript"
   version "0.3.4"
