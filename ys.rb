@@ -1,18 +1,18 @@
 class Ys < Formula
   desc "Program in YAML - Code is Data"
   homepage "https://github.com/yaml/yamlscript"
-  version "0.3.4"
+  version "0.3.5"
   license "MIT"
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/ys-#{version}-linux-x64.tar.xz"
-      sha256 "944b136bc265af0ed8fbac976a7b8554574fbee0be2c51a0a262ba0facc136a0"
+      sha256 "ba4a24b079fded6a71f4576123871a14c4c90b28dc4187530d2f372e6d021580"
     elsif Hardware::CPU.arm?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/ys-#{version}-linux-aarch64.tar.xz"
-      sha256 "9f861df2e0c4e1e119e019b6ba340cc778b18d89919f5dece72bb57dd896d2b4"
+      sha256 "2397687fe7259aa40ecc3d0cd0281228399a9930375aed03e63527fd75c80127"
     else
       odie "YAMLScript is not available for this Linux architecture"
     end
@@ -22,7 +22,7 @@ class Ys < Formula
     if Hardware::CPU.arm?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/ys-#{version}-macos-arm64.tar.xz"
-      sha256 "6e8a9621fc56befb220243bd182337f698ffae89786f1637ba331930cc03c96f"
+      sha256 "3ac7f534aa89c82d7179da25f572cf4a3fda7585d26975438f40af62f5e5dbb8"
     else
       odie "YAMLScript is not available for this macOS architecture"
     end

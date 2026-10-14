@@ -1,18 +1,18 @@
 class Libys < Formula
   desc "YAMLScript shared library"
   homepage "https://github.com/yaml/yamlscript"
-  version "0.3.4"
+  version "0.3.5"
   license "MIT"
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/libys-#{version}-linux-x64.tar.xz"
-      sha256 "9faee1277acb82d3be624fbae5d905809ffc939dbca67da1574fd240871a1612"
+      sha256 "8fcdd79ab8b7734c6856f058e2917371099eb37de04f7193846fac89feea0d5e"
     elsif Hardware::CPU.arm?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/libys-#{version}-linux-aarch64.tar.xz"
-      sha256 "2968694b5cdedc1fd12bb4191978e1125c057a6b7ec78cd8d2e3e218d41299b4"
+      sha256 "faa235252bbdc8106cf7e5c12994ba7f3bce74710a35135ef97fbc02fa445348"
     else
       odie "libys is not available for this Linux architecture"
     end
@@ -22,7 +22,7 @@ class Libys < Formula
     if Hardware::CPU.arm?
       url "https://github.com/yaml/yamlscript/releases/download/" \
         "#{version}/libys-#{version}-macos-arm64.tar.xz"
-      sha256 "c91dd1f5b2a491df95644566ccb66462be3c147ae71e11f48a1160d3ef5bdd37"
+      sha256 "b2fd4b5b8ff99b0f27b58ddf3914114871fe83238c10252f348b668c1ef5b351"
     else
       odie "libys is not available for this macOS architecture"
     end
